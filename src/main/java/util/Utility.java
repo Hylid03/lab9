@@ -1,6 +1,7 @@
 package util;
 
 import domain.BTree;
+import domain.BTreeNode;
 
 
 import java.text.DecimalFormat;
@@ -40,7 +41,7 @@ public class Utility {
         return new Random().nextInt(fin-inicio+1)+inicio;
     }
 
-    public static int compare(Object a, Object b) {
+    public static int compare(Object a, Object b) { //TODO make this compatible with the work on hand
         switch (instanceOf(a, b)){
             case "Integer":
                 Integer int1 = (Integer)a; Integer int2 = (Integer)b;
@@ -54,6 +55,9 @@ public class Utility {
             case "BTree":
                 BTree bt1 = (BTree)a; BTree Bt2 = (BTree)b;
                 return bt1==Bt2?0:-1;
+            case "BTreeNode":
+                BTreeNode btn1 = (BTreeNode) a;BTreeNode btn2 = (BTreeNode) b;
+                return btn1==btn2?0:-1;
         }
         return 2; //Unknown
     }
@@ -63,6 +67,7 @@ public class Utility {
         if(a instanceof String && b instanceof String) return "String";
         if(a instanceof Character && b instanceof Character) return "Character";
         if(a instanceof BTree && b instanceof BTree) return "BTree";
+        if(a instanceof BTreeNode && b instanceof BTreeNode) return "BTreeNode";
 
         return "Unknown";
     }

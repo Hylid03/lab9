@@ -18,7 +18,7 @@ class BSTTest {
         String[] names = {
                 "Olivia", "Liam", "Emma", "Noah", "Ava", "Oliver", "Sophia", "Elijah", "Isabella", "James"};
         for (int i = 0; i < 100; i++) {
-            numbers.add(i);
+            numbers.add(util.Utility.getRandom(101-1));
             if (i<spanishAlphabet.length)
                 alphabet.add(spanishAlphabet[i]);
             if (i<names.length)
@@ -32,12 +32,9 @@ class BSTTest {
         System.out.println(bst);
 
         System.out.println(bst.size()+"\n"+bst.min()+"\n"+bst.max());
-        BST aux;
-        aux= (BST)bst.find(numbers);
-        BST aux2;
-        aux2= (BST)bst.find(alphabet);
-        BST aux3;
-        aux3= (BST)bst.find(names);
+        BST aux = (BST)bst.find(numbers);
+        BST aux2 = (BST)bst.find(alphabet);
+        BST aux3 = (BST)bst.find(names);
 
         for (int i = 0; i < 5; i++) {
             int num = util.Utility.getRandom(100);
