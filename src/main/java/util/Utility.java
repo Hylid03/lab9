@@ -1,5 +1,6 @@
 package util;
 
+import domain.BST;
 import domain.BTree;
 import domain.BTreeNode;
 
@@ -42,22 +43,26 @@ public class Utility {
     }
 
     public static int compare(Object a, Object b) { //TODO make this compatible with the work on hand
+
         switch (instanceOf(a, b)){
             case "Integer":
                 Integer int1 = (Integer)a; Integer int2 = (Integer)b;
-                return int1 < int2 ? -1 : int1 > int2 ? 1 : 0; //0 == equal
+                return int1.compareTo(int2); //0 == equal
             case "String":
                 String st1 = (String)a; String st2 = (String)b;
-                return st1.compareTo(st2)<0 ? -1 : st1.compareTo(st2) > 0 ? 1 : 0;
+                return Integer.compare(st1.compareTo(st2), 0);
             case "Character":
                 Character c1 = (Character)a; Character c2 = (Character)b;
-                return c1.compareTo(c2)<0 ? -1 : c1.compareTo(c2)>0 ? 1 : 0;
+                return Integer.compare(c1.compareTo(c2), 0);
             case "BTree":
                 BTree bt1 = (BTree)a; BTree Bt2 = (BTree)b;
                 return bt1==Bt2?0:-1;
             case "BTreeNode":
                 BTreeNode btn1 = (BTreeNode) a;BTreeNode btn2 = (BTreeNode) b;
                 return btn1==btn2?0:-1;
+            case "BST":
+                BST bst1 = (BST) a;BST bst2 = (BST) b;
+                return bst1==bst2?0:-1;
         }
         return 2; //Unknown
     }
@@ -68,7 +73,7 @@ public class Utility {
         if(a instanceof Character && b instanceof Character) return "Character";
         if(a instanceof BTree && b instanceof BTree) return "BTree";
         if(a instanceof BTreeNode && b instanceof BTreeNode) return "BTreeNode";
-
+        if(a instanceof BST && b instanceof BST) return "BST";
         return "Unknown";
     }
 }

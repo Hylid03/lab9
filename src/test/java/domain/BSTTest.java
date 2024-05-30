@@ -27,24 +27,25 @@ class BSTTest {
 
         bst.add(numbers);
         bst.add(alphabet);
-        bst.add(names);
+        bst.add(name);
 
         System.out.println(bst);
 
         System.out.println(bst.size()+"\n"+bst.min()+"\n"+bst.max());
+
         BST aux = (BST)bst.find(numbers);
         BST aux2 = (BST)bst.find(alphabet);
-        BST aux3 = (BST)bst.find(names);
+        BST aux3 = (BST)bst.find(name);
 
         for (int i = 0; i < 5; i++) {
             int num = util.Utility.getRandom(100);
-            System.out.println(aux.contains(num)?"The number was found":"The number is not in the tree");
+            System.out.println(aux.contains(num)?"The number ["+num+"] was found":"The number is not in the tree");
         }
         for (int i = 0; i < 5; i++) {
-            System.out.println(aux2.contains(i+4)?"The number was found":"The number is not in the tree");
+            System.out.println(aux2.contains(spanishAlphabet[i+4])?"The letter ["+spanishAlphabet[i+4]+"] was found":"The letter is not in the tree");
         }
         for (int i = 0; i < 5; i++) {
-            System.out.println(aux3.contains(i+2)?"The number was found":"The number is not in the tree");
+            System.out.println(aux3.contains(names[i+2])?"The name ["+names[i+2]+"] was found":"The name is not in the tree");
         }
     }
 }

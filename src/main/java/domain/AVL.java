@@ -299,6 +299,11 @@ public class AVL implements Tree {
         }
         return result;
     }
+    public boolean isBalanced(){
+        if (getBalanceFactor(root)>1)
+            return false;
+        else return true;
+    }
 
 
     //preOrder: recorre el árbol de la forma: nodo-izq-der
@@ -314,7 +319,4 @@ public class AVL implements Tree {
         result+="PostOrder: "+postOrder(root)+"\n";
         return result;
     }
-
-
-
 }
