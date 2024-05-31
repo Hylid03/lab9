@@ -9,8 +9,10 @@ class AVLTest {
             avl.add(util.Utility.getRandom(100-1));
         System.out.println(avl);
         System.out.println(avl.size()+"\n"+avl.min()+"\n"+avl.max());
-        //TODO make the "isBalanced()" method
-        //TODO make both the getSequence() & getSequence(BTreeNode node)
+        avl.isBalanced();
+        avl.getSequence();
+        //TODO terminar el método "isBalanced()"
+        //TODO terminar el método getSequence(BTreeNode node)
 
      }
 

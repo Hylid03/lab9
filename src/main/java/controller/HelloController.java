@@ -40,7 +40,7 @@ public class HelloController {
 
     @FXML
     public void bstAVLOperations(ActionEvent actionEvent) {
-        loadPage("ucr/lab/bstAVLOperations.fxml");
+        loadPage("bstAVLOperations.fxml");
     }
 
     @FXML

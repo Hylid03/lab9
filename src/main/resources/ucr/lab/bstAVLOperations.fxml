@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.BstAVLOperationsController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="573.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BstAVLOperationsController">
+    <children>
+        <Pane prefHeight="91.0" prefWidth="887.0" style="-fx-background-color: #e05576;">
+            <children>
+                <Label layoutX="175.0" layoutY="14.0" prefHeight="61.0" prefWidth="581.0" text="Graphic Binary Tree Search - Operations">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutY="87.0" prefHeight="561.0" prefWidth="887.0" style="-fx-background-color: #ffd8d8;">
+         <children>
+            <Pane prefHeight="136.0" prefWidth="887.0" style="-fx-background-color: #829d74;">
+               <children>
+                  <Button layoutX="6.0" layoutY="14.0" mnemonicParsing="false" onAction="#randomizeOnAction" prefHeight="34.0" prefWidth="118.0" text="Randomize" />
+                  <Button layoutX="6.0" layoutY="68.0" mnemonicParsing="false" onAction="#containsOnAction" prefHeight="34.0" prefWidth="118.0" text="Contains" />
+                  <Button layoutX="150.0" layoutY="14.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="34.0" prefWidth="118.0" text="Add" />
+                  <Button layoutX="150.0" layoutY="68.0" mnemonicParsing="false" onAction="#removeOnAction" prefHeight="34.0" prefWidth="118.0" text="Remove" />
+                  <Button layoutX="284.0" layoutY="14.0" mnemonicParsing="false" onAction="#nodeHeightOnAction" prefHeight="34.0" prefWidth="118.0" text="Node Height" />
+                  <Button layoutX="284.0" layoutY="68.0" mnemonicParsing="false" onAction="#treeHeightOnAction" prefHeight="34.0" prefWidth="118.0" text="Tree Height" />
+                  <RadioButton layoutX="416.0" layoutY="23.0" mnemonicParsing="false" onAction="#bstSelectedOnAction" text="Árbol BST" />
+                  <RadioButton layoutX="416.0" layoutY="77.0" mnemonicParsing="false" onAction="#avlSelectedOnAction" text="Árbol AVL" />
+                  <Label layoutX="535.0" layoutY="48.0" prefHeight="41.0" prefWidth="186.0" text="Label" textFill="#d72626" visible="false" />
+               </children>
+            </Pane>
+         </children></Pane>
+    </children>
 </AnchorPane>

@@ -303,6 +303,7 @@ public class AVL implements Tree {
         if (getBalanceFactor(root)>1)
             return false;
         else return true;
+        //TODO terminar
     }
 
 
@@ -319,4 +320,18 @@ public class AVL implements Tree {
         result+="PostOrder: "+postOrder(root)+"\n";
         return result;
     }
+
+    public String getSequence() throws TreeException {
+        if (isEmpty()){
+            throw new TreeException("g");
+        }else{
+            return getSequence(root) + "\n";
+        }
+    }
+    public String getSequence(BTreeNode node){
+        String result= " ";
+        return result;
+        //TODO terminar
+    }
+
 }

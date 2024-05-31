@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="623.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicBSTAVLController">
    <children>
       <Pane prefHeight="64.0" prefWidth="821.0" style="-fx-background-color: #fe6c63;">
@@ -20,12 +19,13 @@
          <children>
             <Pane prefHeight="96.0" prefWidth="821.0" style="-fx-background-color: #e89d10;">
                <children>
-                  <Button layoutX="21.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="114.0" text="Randomize" />
-                  <Button layoutX="21.0" layoutY="48.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="114.0" text="Levels" />
-                  <Button layoutX="151.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="114.0" text="Is Balanced?" />
-                  <Button layoutX="149.0" layoutY="48.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="114.0" text="Tour Info" />
-                  <RadioButton layoutX="284.0" layoutY="12.0" mnemonicParsing="false" text="Árbol BST" />
-                  <RadioButton layoutX="284.0" layoutY="60.0" mnemonicParsing="false" text="Árbol AVL" />
+                  <Button layoutX="21.0" mnemonicParsing="false" onAction="#randomizeOnAction" prefHeight="40.0" prefWidth="114.0" text="Randomize" />
+                  <Button layoutX="21.0" layoutY="48.0" mnemonicParsing="false" onAction="#levelsOnAction" prefHeight="40.0" prefWidth="114.0" text="Levels" />
+                  <Button layoutX="151.0" mnemonicParsing="false" onAction="#isBalancedInAction" prefHeight="40.0" prefWidth="114.0" text="Is Balanced?" />
+                  <Button layoutX="149.0" layoutY="48.0" mnemonicParsing="false" onAction="#tourInfoInAction" prefHeight="40.0" prefWidth="114.0" text="Tour Info" />
+                  <RadioButton fx:id="rbt_BST" layoutX="284.0" layoutY="12.0" mnemonicParsing="false" onAction="#bstSelectedOnAction" text="Árbol BST" />
+                  <RadioButton fx:id="rbt_AVL" layoutX="284.0" layoutY="60.0" mnemonicParsing="false" onAction="#avlSelectedOnAction" text="Árbol AVL" />
+                  <Label fx:id="lbl_IsBalanced" layoutX="422.0" layoutY="12.0" prefHeight="40.0" prefWidth="174.0" text="Label" visible="false" />
                </children>
             </Pane>
          </children>
