@@ -15,10 +15,14 @@ public class BstAVLOperationsController {
     //TODO B
 
     public void bstSelectedOnAction(){
-        //TODO asignarlo su evento
+        if (rbt_BST.isPressed()){
+
+        }
     }
     public void avlSelectedOnAction(){
-        //TODO asignarlo su evento
+        if (rbt_AVL.isPressed()){
+
+        }
     }
 
     public void addOnAction() {

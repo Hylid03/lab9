@@ -235,7 +235,6 @@ public class BST implements Tree {
         return postOrder(root) + "\n";
     }
 
-
     //left-right-node
     private String postOrder(BTreeNode node) {
         String result = " ";

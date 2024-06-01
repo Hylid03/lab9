@@ -344,13 +344,10 @@ public class AVL implements Tree {
     public String getSequence(BTreeNode node){
         String result = " ";
         if (node!=null) {
-            result = getSequence(node.left);
+            result = getSequence(node.left)+;
             result += getSequence(node.right);
-            result += node.data+", ";
+            result += node.data+", added";
         }
         return result;
-
-        //TODO terminar
     }
-
 }

@@ -10,18 +10,23 @@ public class GraphicBSTAVLController {
     public RadioButton rbt_AVL;
     public RadioButton rbt_BST;
     public Label lbl_IsBalanced;
-    BST bst=new BST();
-    AVL avl= new AVL();
+    BST bst = new BST();
+    AVL avl = new AVL();
+    boolean avlSelected = false;
 
-    public void isBalancedInAction(){
-        if (avl.isBalanced()){
-            lbl_IsBalanced.setText("The tree is balanced");
-            lbl_IsBalanced.setVisible(true);
-        }else{
-            lbl_IsBalanced.setText("The tree is not balanced");
-            lbl_IsBalanced.setVisible(true);
+    public void isBalancedInAction() {
+        boolean isBalanced;
+        if (avlSelected) {
+            isBalanced = avl.isBalanced();
+        } else {
+            isBalanced = false; //TODO este es el isBalanced del BST pero se usa asi por su "inexistencia"
         }
-        //TODO encontrar manera de verificar si esta balanceado
+        if (isBalanced) {
+            lbl_IsBalanced.setText("The tree is balanced");
+        } else {
+            lbl_IsBalanced.setText("The tree is not balanced");
+        }
+        lbl_IsBalanced.setVisible(true);
     }
     public void randomizeOnAction(){
         //TODO randomizarlo
@@ -40,8 +45,8 @@ public class GraphicBSTAVLController {
             avl.inOrder();
             avl.preOrder();
             avl.postOrder();
+            //TODO no sé si funciona asi
         }
-        //TODO dar la información del tour
     }
     public void bstSelectedOnAction(){
         //TODO asignarlo su evento
@@ -49,5 +54,4 @@ public class GraphicBSTAVLController {
     public void avlSelectedOnAction(){
         //TODO asignarlo su evento
     }
-
 }
