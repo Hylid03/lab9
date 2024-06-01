@@ -25,8 +25,8 @@
                   <Button layoutX="150.0" layoutY="68.0" mnemonicParsing="false" onAction="#removeOnAction" prefHeight="34.0" prefWidth="118.0" text="Remove" />
                   <Button layoutX="284.0" layoutY="14.0" mnemonicParsing="false" onAction="#nodeHeightOnAction" prefHeight="34.0" prefWidth="118.0" text="Node Height" />
                   <Button layoutX="284.0" layoutY="68.0" mnemonicParsing="false" onAction="#treeHeightOnAction" prefHeight="34.0" prefWidth="118.0" text="Tree Height" />
-                  <RadioButton layoutX="416.0" layoutY="23.0" mnemonicParsing="false" onAction="#bstSelectedOnAction" text="Árbol BST" />
-                  <RadioButton layoutX="416.0" layoutY="77.0" mnemonicParsing="false" onAction="#avlSelectedOnAction" text="Árbol AVL" />
+                  <RadioButton fx:id="rbt_BST" layoutX="416.0" layoutY="23.0" mnemonicParsing="false" onAction="#bstSelectedOnAction" text="Árbol BST" />
+                  <RadioButton fx:id="rbt_AVL" layoutX="416.0" layoutY="77.0" mnemonicParsing="false" onAction="#avlSelectedOnAction" text="Árbol AVL" />
                   <Label layoutX="535.0" layoutY="48.0" prefHeight="41.0" prefWidth="186.0" text="Label" textFill="#d72626" visible="false" />
                </children>
             </Pane>

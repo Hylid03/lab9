@@ -25,6 +25,7 @@
                         <Button layoutX="650.0" layoutY="14.0" mnemonicParsing="false" onAction="#postOrderOnAction" prefHeight="40.0" prefWidth="183.0" text="Post Order" />
                         <RadioButton fx:id="rbt_AVLTour" layoutX="184.0" layoutY="97.0" mnemonicParsing="false" onAction="#avlSelectedOnAction" text="Árbol AVL" />
                         <RadioButton fx:id="rbt_BSTTour" layoutX="27.0" layoutY="97.0" mnemonicParsing="false" onAction="#bstSelectedOnAction" text="Árbol BST" />
+                  <Label fx:id="lbl_Tour" layoutX="365.0" layoutY="68.0" prefHeight="55.0" prefWidth="183.0" text="Label" textFill="#f53a3a" visible="false" />
                     </children></Pane>
             </children>
         </Pane>

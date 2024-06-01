@@ -1,5 +1,8 @@
 package controller;
 
+import domain.AVL;
+import domain.BST;
+import domain.TreeException;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 
@@ -7,10 +10,11 @@ public class GraphicBSTAVLController {
     public RadioButton rbt_AVL;
     public RadioButton rbt_BST;
     public Label lbl_IsBalanced;
+    BST bst=new BST();
+    AVL avl= new AVL();
 
     public void isBalancedInAction(){
-        if (){
-
+        if (avl.isBalanced()){
             lbl_IsBalanced.setText("The tree is balanced");
             lbl_IsBalanced.setVisible(true);
         }else{
@@ -25,7 +29,18 @@ public class GraphicBSTAVLController {
     public void levelsOnAction(){
         //TODO hacer los niveles
     }
-    public void tourInfoInAction(){
+    public void tourInfoInAction() throws TreeException {
+        if (rbt_BST.isPressed()){
+            bst.height();
+            bst.inOrder();
+            bst.preOrder();
+            bst.postOrder();
+        }else if (rbt_AVL.isPressed()){
+            avl.height();
+            avl.inOrder();
+            avl.preOrder();
+            avl.postOrder();
+        }
         //TODO dar la información del tour
     }
     public void bstSelectedOnAction(){
