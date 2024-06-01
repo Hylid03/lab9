@@ -305,6 +305,19 @@ public class AVL implements Tree {
         else return true;
         //TODO terminar
     }
+//    public String getSequence() throws TreeException {
+//        if (isEmpty()){
+//            throw new TreeException("g");
+//        }else{
+//            return getSequence(root) + "\n";
+//        }
+//    }
+//    public String getSequence(BTreeNode node){
+//        String result= " ";
+//        return result;
+//        //TODO terminar
+//    }
+
 
 
     //preOrder: recorre el árbol de la forma: nodo-izq-der
@@ -329,8 +342,14 @@ public class AVL implements Tree {
         }
     }
     public String getSequence(BTreeNode node){
-        String result= " ";
+        String result = " ";
+        if (node!=null) {
+            result = getSequence(node.left);
+            result += getSequence(node.right);
+            result += node.data+", ";
+        }
         return result;
+
         //TODO terminar
     }
 
